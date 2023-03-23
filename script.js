@@ -17,6 +17,7 @@ var pla = 0;
 var ast = 0;
 var ThYpercent = 0;
 var FiYpercent = 0;
+var StackedBar;
 
   function Check() {
     age = parseInt(document.getElementById("age").value);
@@ -37,10 +38,25 @@ function Calc() {
   ThYpercent = ThYear * 100;
   FiYpercent = FiYear * 100;
 
-//Chart JS
+  document.getElementById("3Y").value = ThYpercent.toPrecision(3) + "%";
+  document.getElementById("5Y").value = FiYpercent.toPrecision(3) + "%";
+
+  drawChart();
+}
+
+function drawChart() {
+    //Chart JS
 var ctx = document.getElementById("chart");
 
-new Chart(ctx, {
+if (StackedBar != undefined) {
+    var y = [ThYpercent, FiYpercent];
+    StackedBar.data.datasets[0].data[0] = y[0];
+    StackedBar.data.datasets[1].data[0] = y[1];
+    StackedBar.update();
+} 
+
+else {
+StackedBar = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Risk Percentage'],
@@ -69,9 +85,8 @@ new Chart(ctx, {
             }
         }
     }
-});
-
-//end Calc fxn 
+}); 
+}
 }
 
 

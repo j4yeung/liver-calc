@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Bootstrap Sidebar</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The NAFLD MRE Calculator is a hepatic decompensation risk calculator for predicting 3 and 5 Year mortality in NAFLD patients...">
+  <title>NAFLD MRE Calculator</title>
   <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
@@ -51,7 +52,7 @@
         </nav>
 
         <!-- Page Content  -->
-        <div id="content">
+        <div id="content" class="container-fluid">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -76,11 +77,11 @@
                 </div>
             </nav>
 
-            <h2>Magnetic Resonance Elastography-Based (MRE) Prediction Model for Hepatic Decompensation in NAFLD</h2>
+            <h1>Magnetic Resonance Elastography (MRE) -Based Prediction Model for Hepatic Decompensation in NAFLD</h1>
             
             <div class="row">
                 <div class="col m-3 calc-column">
-                   <div class="row m-4"> 
+                   <div class="row mt-4 mb-4"> 
                         <div class="col-5"> <h4>Age: </h4></div>
                         <div class="col-7 input-group"> 
                             <input class="form-control input" id="age" placeholder="">      
@@ -89,7 +90,7 @@
                             </div>               
                         </div>
                     </div>
-                    <div class="row m-4"> 
+                    <div class="row mt-4 mb-4"> 
                         <div class="col"> <h4>Albumin: </h4></div>
                         <div class="col-7 input-group"> 
                             <input class="form-control input" id="albumin" placeholder="">      
@@ -98,7 +99,7 @@
                             </div>               
                         </div>
                     </div>
-                    <div class="row m-4"> 
+                    <div class="row mt-4 mb-4"> 
                         <div class="col"> <h4>MRE: </h4></div>
                         <div class="col-7 input-group"> 
                             <input class="form-control input" id="mre" placeholder="">      
@@ -107,7 +108,7 @@
                             </div>               
                         </div>
                     </div>
-                    <div class="row m-4"> 
+                    <div class="row mt-4 mb-4"> 
                         <div class="col"> <h4>Platelet <br> Count: </h4></div>
                         <div class="col-7 input-group"> 
                             <input class="form-control input" id="platelet" placeholder="">      
@@ -116,7 +117,7 @@
                             </div>               
                         </div>
                     </div>
-                    <div class="row m-4"> 
+                    <div class="row mt-4 mb-4"> 
                         <div class="col"> <h4>AST: </h4></div>
                         <div class="col-7 input-group"> 
                             <input class="form-control input" id="ast" placeholder="">      
@@ -130,15 +131,16 @@
                     </div>
                 </div>
                 <div class="col m-3 calc-column">
-
-                    <canvas id="chart" width=300 height=300> </canvas>
+                    <canvas id="chart" width=200 height=200> </canvas> <!--ChartJs -->
+                    <input id="3Y"> 
+                    <input id="5Y"> 
                 </div>
             </div>
 
             <div class="line"></div>
 
             <h4>Sources</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet</p>
         </div>
     </div>
 <!-- partial -->
