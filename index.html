@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The NAFLD MRE Calculator is a hepatic decompensation risk calculator for predicting 3 and 5 Year mortality in NAFLD patients...">
+  <meta name="keywords" content="NAFLD,MRE,calculator,liver disease">
   <title>NAFLD MRE Calculator</title>
   <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -31,15 +32,15 @@
             </div>
 
             <ul class="list-unstyled components">
-                <p>UCSD NAFLD Research Center</p>
+                <p>NAFLD Research Center</p>
                 <li>
-                    <a href="#">NAFLD MRE Calculator</a>
+                    <a href="index.html">NAFLD MRE Calculator</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
 
@@ -67,10 +68,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -78,69 +79,107 @@
             </nav>
 
             <h1>Magnetic Resonance Elastography (MRE) -Based Prediction Model for Hepatic Decompensation in NAFLD</h1>
-            
+            <br>
+        
             <div class="row">
-                <div class="col m-3 calc-column">
+                <form class="col-lg-5 m-3 pt-3" id="calc-column">
                    <div class="row mt-4 mb-4"> 
-                        <div class="col-5"> <h4>Age: </h4></div>
-                        <div class="col-7 input-group"> 
-                            <input class="form-control input" id="age" placeholder="">      
+                        <div class="col-sm-5"> <h4>Age: </h4></div>
+                        <div class="col-sm-7 input-group"> 
+                            <input class="form-control input" id="age" placeholder="" type="number" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">Years</span>
                             </div>               
                         </div>
                     </div>
                     <div class="row mt-4 mb-4"> 
-                        <div class="col"> <h4>Albumin: </h4></div>
-                        <div class="col-7 input-group"> 
-                            <input class="form-control input" id="albumin" placeholder="">      
+                        <div class="col-sm-5"> <h4>Albumin: </h4></div>
+                        <div class="col-sm-7 input-group"> 
+                            <input class="form-control input" id="albumin" placeholder="Norm: 3.4 - 5.4" type="number" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">g/dL</span>
                             </div>               
                         </div>
                     </div>
                     <div class="row mt-4 mb-4"> 
-                        <div class="col"> <h4>MRE: </h4></div>
-                        <div class="col-7 input-group"> 
-                            <input class="form-control input" id="mre" placeholder="">      
+                        <div class="col-sm-5"> <h4>MRE: </h4></div>
+                        <div class="col-sm-7 input-group"> 
+                            <input class="form-control input" id="mre" placeholder="Norm: < 2.5" type="number" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">kPa</span>
                             </div>               
                         </div>
                     </div>
                     <div class="row mt-4 mb-4"> 
-                        <div class="col"> <h4>Platelet <br> Count: </h4></div>
-                        <div class="col-7 input-group"> 
-                            <input class="form-control input" id="platelet" placeholder="">      
+                        <div class="col-sm-5"> <h4>Platelet <br> Count: </h4></div>
+                        <div class="col-sm-7 input-group"> 
+                            <input class="form-control input" id="platelet" placeholder="Norm: 150-450" type="number" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">x1000/μL</span>
                             </div>               
                         </div>
                     </div>
                     <div class="row mt-4 mb-4"> 
-                        <div class="col"> <h4>AST: </h4></div>
-                        <div class="col-7 input-group"> 
-                            <input class="form-control input" id="ast" placeholder="">      
+                        <div class="col-sm-5"> <h4>AST: </h4></div>
+                        <div class="col-sm-7 input-group"> 
+                            <input class="form-control input" id="ast" placeholder="Norm: 8-33" type="number" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">U/L</span>
                             </div>               
                         </div>
                     </div>
-                    <div class="row m-3 mt-5 justify-content-center">
-                        <button type="button" class="btn btn-secondary" id="calbutton" onclick="Calc()"> Calculate </button>
+                    <div class="row m-3 mt-5 mb-5 justify-content-center">
+                        <button type="button" class="btn btn-secondary btn-block" id="calbutton" onclick="Calc()" disabled> Calculate </button>
                     </div>
-                </div>
-                <div class="col m-3 calc-column">
-                    <canvas id="chart" width=200 height=200> </canvas> <!--ChartJs -->
-                    <input id="3Y"> 
-                    <input id="5Y"> 
+                </form>
+                <div class="col-lg m-3 pt-3 calc-column">
+                    <div>
+                        <canvas id="chart"> </canvas> <!--ChartJs -->
+                    </div>
+                    <div class = "row">
+                        <div class = "col-lg-6 mt-3" id="output1">
+                            <h6>3-Year Risk of Hepatic Decompensation:&ensp;</h6>
+                            <h4 id = "3Y"> </h4>
+                        </div>
+                        <div class = "col-lg-6 mt-3" id="output2">
+                            <h6>5-Year Risk of Hepatic Decompensation:&ensp;</h6>
+                            <h4 id = "5Y"> </h4>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="line"></div>
 
-            <h4>Sources</h4>
-            <p>Lorem ipsum dolor sit amet</p>
+            <h4>Discussion</h4>
+            <p>In this multi-center, international study of adults with NAFLD, we found that a multivariable MRE-based model with age, AST, albumin, and platelets 
+                best predicted the risk of hepatic decompensation in training and validation cohorts. The diagnostic accuracy of the MRE-based multivariable model 
+                for the 3- and 5-year risk of decompensation remained between 0.88-0.90 in training and validation cohorts and was superior to FIB-4.
+                 The combination of clinical parameters widely available in routine practice with MRE may offer more refined risk prediction for patients with 
+                 NAFLD. Applying the multivariable regression model as an online calculator can quickly yield the 3- and 5-year risk of hepatic decompensation to guide 
+                 clinical management and patient counselling. In addition, models to predict HCC and all-cause mortality outperformed FIB-4, had good diagnostic accuracy
+                  and warrant validation in external cohorts. </p>
+            <div class="line"></div>
+
+            <h4>In Context With Published Literature</h4>
+            <p>Fibrosis stage on liver biopsy has been adopted as a surrogate marker for future liver-related outcomes in clinical trials based on longitudinal studies demonstrating its association with liver-related outcomes and death. (8, 12) Recently, studies have demonstrated the direct association of non-invasive tests (NITs) such as FIB-4 index (27, 28), liver stiffness on vibration-controlled transient elastography (29), and MRE (20, 22, 30, 31) on liver-related events. The combination of NITs may offer enhanced risk prediction for liver-related events and to date, this has been evaluated with the MEFIB index, combining MRE and FIB-4, which had a high negative predictive value (20). Boursier et al.(32) reported on the sequential combination of FIB-4 and VCTE and demonstrated a strong association with liver-related events. Here, we evaluated a candidate set of variables and then formed a multivariable model for hepatic decompensation that retained excellent diagnostic accuracy in a multi-ethnic validation cohort. Using the multivariable model, the estimated 3- and 5-year risk of hepatic decompensation can be provided in clinical care, presenting a more granular understanding of a patient’s individual risk. This approach resembles risk stratification in cardiovascular disease through Framingham (33) and ASCVD (34) risk scores and if validated, may inform the need for treatment in patients with NAFLD.
+                Importantly, MRE-based models for HCC and all-cause mortality also demonstrated good diagnostic accuracy and outperformed FIB-4. As the utilization of liver biopsy in NAFLD decreases, the ability to predict HCC risk and determine the need for screening without overt evidence of cirrhosis remains an unmet need. In our study, T2DM was associated with hepatic decompensation and HCC on univariable analysis but did not remain a significant predictor in multivariable models. In our cohort, there T2DM was collinear with age and MRE, which resulted in T2DM not remaining in the multivariable model.  
+                 </p>
+            <div class="line"></div>
+
+            <h4>Strengths and Limitations</h4>
+            <p> This study has several notable strengths. First, our international multi-center, multi-ethnic cohort included a large sample size of > 1,300
+                 patients who underwent baseline MRE and laboratory tests, making this one of the largest studies of NAFLD-related outcomes. Furthermore, 
+                 the high number of incident hepatic decompensation events (n=85, 6.5%) allowed for adequate power to assess multivariable models in a training 
+                 and validation cohort. However, this was a retrospective study of patients at academic medical centers. Nevertheless, future, multicenter,
+                  prospective studies will be required to validate the prognostic role of an MRE-based prediction model. 
+                In addition, MRE was only assessed at a single time point in this study. So far, only a few studies demonstrated an association between
+                 change in MRE and change in liver histology in cohorts of 50-100 patients.(19, 35) A recent study evaluated the impact of change in MRE 
+                 on liver-related outcomes and demonstrated that progression in liver stiffness on MRE in 29 patients with compensated cirrhosis was associated
+                  with hepatic decompensation or death (36).  Future studies may evaluate if serial MRE measurements over time can refine the prediction of
+                   future liver-related events, however, the clinical value of accurate risk prediction with a single MRE value remains significant.  
+                </p>
+            
         </div>
     </div>
 <!-- partial -->

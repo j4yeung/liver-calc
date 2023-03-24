@@ -19,15 +19,17 @@ var ThYpercent = 0;
 var FiYpercent = 0;
 var StackedBar;
 
-  function Check() {
+function Check() {
     age = parseInt(document.getElementById("age").value);
     alb = parseInt(document.getElementById("albumin").value);
     mre = parseInt(document.getElementById("mre").value);
     pla = parseInt(document.getElementById("platelet").value);
     ast = parseInt(document.getElementById("ast").value);
-    ThY = parseInt(document.getElementById("3Y").value);
-    FiY = parseInt(document.getElementById("5Y").value);
 }
+const form = document.getElementById("calc-column");
+form.addEventListener("change", () => {
+    document.getElementById("calbutton").disabled = !form.checkValidity()
+});
 
 //Calculate risk score and Chart JS
 function Calc() {
@@ -38,14 +40,16 @@ function Calc() {
   ThYpercent = ThYear * 100;
   FiYpercent = FiYear * 100;
 
-  document.getElementById("3Y").value = ThYpercent.toPrecision(3) + "%";
-  document.getElementById("5Y").value = FiYpercent.toPrecision(3) + "%";
+  document.getElementById("3Y").textContent = ThYpercent.toPrecision(3) + "%";
+  document.getElementById("5Y").textContent = FiYpercent.toPrecision(3) + "%";
 
   drawChart();
 }
 
 function drawChart() {
     //Chart JS
+
+
 var ctx = document.getElementById("chart");
 
 if (StackedBar != undefined) {
@@ -83,11 +87,20 @@ StackedBar = new Chart(ctx, {
             x: {
                 stacked: true
             }
-        }
+        },
+        responsive: true,
+        aspectRatio: 1 / 1,
+        resizeDelay: 20
+        
     }
 }); 
+
+document.getElementById("output1").style.display = "flex";
+document.getElementById("output2").style.display = "flex";
 }
+
 }
+
 
 
 

@@ -162,10 +162,34 @@ input {
 }
 
 canvas { 
-    width: 25%;
     height: auto;
 }
 
+#output1 {
+    display: none;
+}
+#output2 {
+    display: none;
+}
+
+#calc-column {
+    background-color: #262D43;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    color: white;
+    flex: 1;
+}
+#calc-column:before {
+    left: -999em;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 999em;
+    top:0;
+    bottom:0;
+    background-color: #262D43;
+    z-index:-1;
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

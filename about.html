@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The NAFLD MRE Calculator is a hepatic decompensation risk calculator for predicting 3 and 5 Year mortality in NAFLD patients...">
+  <meta name="keywords" content="NAFLD,MRE,calculator,liver disease">
+  <title>NAFLD MRE Calculator</title>
+  <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<!-- Chart JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Liver Calc</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>NAFLD Research Center</p>
+                <li>
+                    <a href="index.html">NAFLD MRE Calculator</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download Paper</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1>About the Authors</h1>
+            <br>
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-6 pt-5 text-sm-center">
+                        <h4>Veeral Ajmera, MD</h4>
+                        <img src = "ajmera.png" alt = "Dr. Veeral Ajmera" height="300" width="300">
+                    </div>
+                    <div class="col-sm-6">
+                        <p> Veeral Ajmera, MD, is a board-certified gastroenterologist who treats patients with chronic liver disease, including those with cirrhosis. He also has expertise with fatty liver disease and liver transplantation.</p>
+                        <p>As an assistant professor in the Department of Medicine, Dr. Ajmera conducts research on non-alcoholic fatty liver disease and the hepatitis B virus. His work has been published widely in peer-reviewed journals. </p> 
+                        <p>Dr. Ajmera completed fellowships in gastroenterology and transplant hepatology at UC San Francisco (UCSF) and did an internal medicine residency at Brigham and Women's Hospital, Harvard Medical School. He earned his medical degree from University of Texas Southwestern Medical Center and a master's degree in clinical research from UCSF. He is board certified in internal medicine and gastroenterology. </p>
+                        <p>Dr. Ajmera is a member of the American Association for the Study of Liver Diseases, the American College of Gastroenterology, the American Gastroenterological Association, and the American Society of Transplantation.</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row">
+                    <div class="col-sm-6 text-sm-center">
+                        <h4>Rohit Loomba, MD</h4>
+                        <img src = "loomba_square.png" alt = "Dr. Rohit Loomba" height="300" width="300">
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Rohit Loomba, MD, MHSc, is a leading expert in translational research and innovative clinical trial design in nonalcoholic fatty liver disease (NAFLD) and steatohepatitis (NASH).  He is the founding director of the UCSD NAFLD Translational Research Unit where his team is conducting cutting edge research in all aspects of NAFLD including non-invasive biomarkers, genetics, epidemiology, clinical trial design, imaging end-points, 
+                        and integrated OMICs using microbiome, metabolome and lipidome. <a href="https://medschool.ucsd.edu/som/medicine/divisions/gastro/research/NAFLD/team/loomba/Pages/default.aspx" style="color: #262D43"> More</a> </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+<script  src="./script.js"></script>
+
+</body>
+</html>
