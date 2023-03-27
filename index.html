@@ -82,7 +82,7 @@
             <br>
         
             <div class="row">
-                <form class="col-lg-5 m-3 pt-3" id="calc-column">
+                <form class="col-lg-5 m-3 pt-3 pb-3 h-100" id="calc-column">
                    <div class="row mt-4 mb-4"> 
                         <div class="col-sm-5"> <h4>Age: </h4></div>
                         <div class="col-sm-7 input-group"> 
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="row mt-4 mb-4"> 
-                        <div class="col-sm-5"> <h4>Platelet <br> Count: </h4></div>
+                        <div class="col-sm-5"> <h4>Platelet Count:</h4></div>
                         <div class="col-sm-7 input-group"> 
                             <input class="form-control input" id="platelet" placeholder="Norm: 150-450" type="number" required>      
                             <div class="input-group-append">
@@ -128,20 +128,17 @@
                             </div>               
                         </div>
                     </div>
-                    <div class="row m-3 mt-5 mb-5 justify-content-center">
-                        <button type="button" class="btn btn-secondary btn-block" id="calbutton" onclick="Calc()" disabled> Calculate </button>
-                    </div>
                 </form>
-                <div class="col-lg m-3 pt-3 calc-column">
-                    <div>
+                <div class="col-lg-6 justify-content-center" id="result">
+                    <div id="chart-d">
                         <canvas id="chart"> </canvas> <!--ChartJs -->
                     </div>
                     <div class = "row">
-                        <div class = "col-lg-6 mt-3" id="output1">
+                        <div class = "col-sm-6 mt-3" id="output1">
                             <h6>3-Year Risk of Hepatic Decompensation:&ensp;</h6>
                             <h4 id = "3Y"> </h4>
                         </div>
-                        <div class = "col-lg-6 mt-3" id="output2">
+                        <div class = "col-sm-6 mt-3" id="output2">
                             <h6>5-Year Risk of Hepatic Decompensation:&ensp;</h6>
                             <h4 id = "5Y"> </h4>
                         </div>
@@ -179,7 +176,7 @@
                   with hepatic decompensation or death (36).  Future studies may evaluate if serial MRE measurements over time can refine the prediction of
                    future liver-related events, however, the clinical value of accurate risk prediction with a single MRE value remains significant.  
                 </p>
-            <div class="line"></div>
+            <div class="spacer"></div>
             <footer>
                  <div class="row p-4">
                     <div class="col-lg-5">
@@ -221,8 +218,8 @@
                 </div> 
                   
            </footer>
-           <div class="endcopy">
-            <p class="offset-sm-3 pt-3 mb-0" style="color: white">Copyright © 2023 Justin Yeung</p>   
+           <div class="endcopy text-sm-center">
+            <p class="pt-3 mb-0" style="color: white">Copyright © 2023 Justin Yeung</p>   
             </div> 
        </div>
         

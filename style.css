@@ -1,6 +1,4 @@
-/*
-    DEMO STYLE
-*/
+/* STYLE*/
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -166,10 +164,9 @@ input {
     width: 100%;
 }
 
-canvas { 
-    height: auto;
+#chart{
+    display: none;
 }
-
 #output1 {
     display: none;
 }

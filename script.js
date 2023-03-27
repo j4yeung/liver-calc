@@ -28,7 +28,9 @@ function Check() {
 }
 const form = document.getElementById("calc-column");
 form.addEventListener("change", () => {
-    document.getElementById("calbutton").disabled = !form.checkValidity()
+    if(form.checkValidity()){
+        Calc();
+    }
 });
 
 //Calculate risk score and Chart JS
@@ -48,7 +50,7 @@ function Calc() {
 
 function drawChart() {
     //Chart JS
-
+document.getElementById("chart").style.display = "flex";
 
 var ctx = document.getElementById("chart");
 
@@ -89,8 +91,8 @@ StackedBar = new Chart(ctx, {
             }
         },
         responsive: true,
-        aspectRatio: 1 / 1,
-        resizeDelay: 20
+        aspectRatio: 1.1,
+        resizeDelay: 2
         
     }
 }); 
