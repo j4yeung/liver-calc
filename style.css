@@ -164,7 +164,7 @@ input {
     width: 100%;
 }
 
-#chart{
+#chart{ /*hides result column until input ready */
     display: none;
 }
 #output1 {
@@ -181,7 +181,7 @@ input {
     color: white;
     flex: 1;
 }
-#calc-column:before {
+#calc-column:before { /*extends input column color into sidebar */
     left: -999em;
     content: "";
     display: block;
@@ -209,8 +209,8 @@ footer p{
 }
 
 .endcopy {
-    background-color: black;
-    box-shadow: 0 50vh 0 50vh black;
+    background-color: #131722;
+    box-shadow: 0 50vh 0 50vh #131722;
     z-index: -1;
 }
 /* ---------------------------------------------------
