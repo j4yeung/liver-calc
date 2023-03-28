@@ -163,9 +163,16 @@ a.article:hover {
 input { 
     width: 100%;
 }
+#calbutton{
+    background-color:#5c6ca1;
+}
 
 #chart{ /*hides result column until input ready */
     display: none;
+}
+#chart-d{
+    position: relative;
+    height: 60vh;
 }
 #output1 {
     display: none;

@@ -29,9 +29,7 @@ function Check() { //set form inputs to global variables
 //checks if form filled, will trigger chart and risk-percentages upon all entries filled 
 const form = document.getElementById("calc-column");
 form.addEventListener("change", () => {
-    if(form.checkValidity()){
-        Calc();
-    }
+    document.getElementById("calbutton").disabled = !form.checkValidity()
 });
 
 //Calculate risk score and Chart JS
@@ -91,7 +89,7 @@ StackedBar = new Chart(ctx, {
             }
         },
         responsive: true, //set sizing chart options 
-        aspectRatio: 1.1,
+        maintainAspectRatio: false,
         resizeDelay: 2 //Important for dynamic resizing 
         
     }
@@ -102,7 +100,3 @@ document.getElementById("output2").style.display = "flex";
 }
 
 }
-
-
-
-

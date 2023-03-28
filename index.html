@@ -128,9 +128,13 @@
                             </div>               
                         </div>
                     </div>
+                    <div class="row m-3 mt-5 mb-5 justify-content-center">
+                        <button type="button" class="btn btn-secondary btn-block" id="calbutton" onclick="Calc()" disabled> Calculate
+                        </button>
+                    </div>
                 </form>
                 <div class="col-lg-6 justify-content-center" id="result"> <!--Output Column: triggered on form entries filled-->
-                    <div id="chart-d">
+                    <div class="chart-container" id="chart-d">
                         <canvas id="chart"> </canvas> <!--ChartJs -->
                     </div>
                     <div class = "row">
