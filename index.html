@@ -32,7 +32,7 @@
             </div>
 
             <ul class="list-unstyled components">
-                <p>NAFLD Research Center</p>
+                <a href="https://medschool.ucsd.edu/som/medicine/divisions/gastro/research/NAFLD/Pages/default.aspx" target="_blank" rel="noreferrer noopener"><p>NAFLD Research Center</p></a>
                 <li>
                     <a href="index.html">NAFLD MRE Calculator</a>
                 </li>
@@ -57,7 +57,6 @@
                 <!-- NavBar top-->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
@@ -82,11 +81,11 @@
             <br>
         
             <div class="row">
-                <form class="col-lg-5 m-3 pt-3 pb-3 h-100" id="calc-column"> <!--Input Column set height-->
+                <form class="col-lg-5 m-3 pt-3 pb-3 h-100" id="calc-column" novalidate> <!--Input Column set height-->
                    <div class="row mt-4 mb-4"> 
                         <div class="col-sm-5"> <h4>Age: </h4></div> 
                         <div class="col-sm-7 input-group"> 
-                            <input class="form-control input" id="age" placeholder="" type="number" required>      
+                            <input class="form-control input" id="age" placeholder="Rec: 18 - 90" type="number" min="18" max="100" oninput="setCustomValidity('')" onchange="screeninput('age')" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">Years</span>
                             </div>               
@@ -95,7 +94,7 @@
                     <div class="row mt-4 mb-4"> 
                         <div class="col-sm-5"> <h4>Albumin: </h4></div>
                         <div class="col-sm-7 input-group"> 
-                            <input class="form-control input" id="albumin" placeholder="Norm: 3.4 - 5.4" type="number" required>      
+                            <input class="form-control input" id="albumin" placeholder="Norm: 3.4 - 5.4" min="1" max="7" type="number" oninput="setCustomValidity('')" onchange="screeninput('albumin')" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">g/dL</span>
                             </div>               
@@ -104,7 +103,7 @@
                     <div class="row mt-4 mb-4"> 
                         <div class="col-sm-5"> <h4>MRE: </h4></div>
                         <div class="col-sm-7 input-group"> 
-                            <input class="form-control input" id="mre" placeholder="Norm: < 2.5" type="number" required>      
+                            <input class="form-control input" id="mre" placeholder="Norm: < 2.5" type="number" min="0" max="15" oninput="setCustomValidity('')" onchange="screeninput('mre')" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">kPa</span>
                             </div>               
@@ -113,7 +112,7 @@
                     <div class="row mt-4 mb-4"> 
                         <div class="col-sm-5"> <h4>Platelet Count:</h4></div>
                         <div class="col-sm-7 input-group"> 
-                            <input class="form-control input" id="platelet" placeholder="Norm: 150-450" type="number" required>      
+                            <input class="form-control input" id="platelet" placeholder="Norm: 150-450" type="number" min="20" max="600" oninput="setCustomValidity('')" onchange="screeninput('platelet')" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">x1000/μL</span>
                             </div>               
@@ -122,15 +121,14 @@
                     <div class="row mt-4 mb-4"> 
                         <div class="col-sm-5"> <h4>AST: </h4></div>
                         <div class="col-sm-7 input-group"> 
-                            <input class="form-control input" id="ast" placeholder="Norm: 8-33" type="number" required>      
+                            <input class="form-control input" id="ast" placeholder="Norm: 8-33" type="number" min="0" max="500" oninput="setCustomValidity('')" onchange="screeninput('ast')" required>      
                             <div class="input-group-append">
                                 <span class="input-group-text" id="unit">U/L</span>
                             </div>               
                         </div>
                     </div>
                     <div class="row m-3 mt-5 mb-5 justify-content-center">
-                        <button type="button" class="btn btn-secondary btn-block" id="calbutton" onclick="Calc()" disabled> Calculate
-                        </button>
+                        <button type="submit" class="btn btn-secondary btn-block" id="calbutton"> Calculate </button>
                     </div>
                 </form>
                 <div class="col-lg-6 justify-content-center" id="result"> <!--Output Column: triggered on form entries filled-->
@@ -219,8 +217,7 @@
                                 </P>
                         </div>
                     </div>
-                </div> 
-                  
+                </div>                
            </footer>
            <div class="endcopy text-sm-center">
             <p class="pt-3 mb-0" style="color: white">Copyright © 2023 Justin Yeung</p>   

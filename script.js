@@ -3,12 +3,10 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active');
     });
 });
+var form = document.getElementById("calc-column");
 //listens and updates form inputs to global variables
-document.getElementById("age").addEventListener("input", Check);
-document.getElementById("albumin").addEventListener("input", Check);
-document.getElementById("mre").addEventListener("input", Check);
-document.getElementById("platelet").addEventListener("input", Check);
-document.getElementById("ast").addEventListener("input", Check);
+form.addEventListener("input", Check);
+
 // global variables 
 var age = 0;
 var alb = 0;
@@ -25,12 +23,43 @@ function Check() { //set form inputs to global variables
     mre = parseInt(document.getElementById("mre").value);
     pla = parseInt(document.getElementById("platelet").value);
     ast = parseInt(document.getElementById("ast").value);
+    if(StackedBar!=undefined){ //update values if chart rendered 
+        ValidForm();
+    }
 }
+
+function screeninput(inputID) { //check input matches min-max or is entered
+    const input = document.getElementById(inputID);
+    const validityState = input.validity;
+
+    if (validityState.valueMissing) {
+        document.getElementById("result").style.display="none";
+        input.setCustomValidity("Please fill out this field");
+    }
+    else if (validityState.rangeUnderflow) {
+        document.getElementById("result").style.display = "none";
+        input.setCustomValidity("Value very low; double-check");
+    }
+    else if(validityState.rangeOverflow) {
+        document.getElementById("result").style.display = "none";
+        input.setCustomValidity("Value very high; double-check");
+    }
+    else {
+        input.setCustomValidity("");
+    }
+    input.reportValidity(); 
+}
+
+
 //checks if form filled, will trigger chart and risk-percentages upon all entries filled 
-const form = document.getElementById("calc-column");
-form.addEventListener("change", () => {
-    document.getElementById("calbutton").disabled = !form.checkValidity()
-});
+form.addEventListener("submit", ValidForm);
+
+function ValidForm() {
+    event.preventDefault(); //prevents button-submit default to refresh page 
+    if(form.checkValidity()){
+        Calc();
+    }
+}
 
 //Calculate risk score and Chart JS
 function Calc() {
@@ -45,6 +74,7 @@ function Calc() {
   document.getElementById("5Y").textContent = FiYpercent.toPrecision(3) + "%";
 
   drawChart();
+    document.getElementById("result").style.display = "initial";
 }
 //ChartJs - draws the bar chart 
 function drawChart() {
@@ -82,10 +112,9 @@ StackedBar = new Chart(ctx, {
             y: {
                 beginAtZero: true,
                 min:0,
-                max:100
+                max:50
             },
             x: {
-                stacked: true //stacks risk % together 
             }
         },
         responsive: true, //set sizing chart options 
