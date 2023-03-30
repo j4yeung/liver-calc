@@ -18,11 +18,11 @@ var FiYpercent = 0; //5-Year Risk Percentage
 var StackedBar; //Bar Chart 
 
 function Check() { //set form inputs to global variables
-    age = parseInt(document.getElementById("age").value);
-    alb = parseInt(document.getElementById("albumin").value);
-    mre = parseInt(document.getElementById("mre").value);
-    pla = parseInt(document.getElementById("platelet").value);
-    ast = parseInt(document.getElementById("ast").value);
+    age = parseFloat(document.getElementById("age").value);
+    alb = parseFloat(document.getElementById("albumin").value);
+    mre = parseFloat(document.getElementById("mre").value);
+    pla = parseFloat(document.getElementById("platelet").value);
+    ast = parseFloat(document.getElementById("ast").value);
     if(StackedBar!=undefined){ //update values if chart rendered 
         ValidForm();
     }

@@ -62,6 +62,8 @@ a:focus {
     display: flex;
     width: 100%;
     align-items: stretch;
+    min-height: 100vh;
+    position: relative;
 }
 
 #sidebar {
@@ -216,9 +218,10 @@ footer p{
 }
 
 .endcopy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #131722;
-    box-shadow: 0 50vh 0 50vh #131722;
-    z-index: -1;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
