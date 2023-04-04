@@ -1,11 +1,11 @@
-$(document).ready(function () {
+$(document).ready(function () { //sidebar
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
 });
 var form = document.getElementById("calc-column");
-//listens and updates form inputs to global variables
-form.addEventListener("input", Check);
+//listens and updates form inputs to global variables once user done with input ("input" for dynamic inputs while in box)
+form.addEventListener("change", Check);
 
 // global variables 
 var age = 0;
@@ -56,7 +56,11 @@ form.addEventListener("submit", ValidForm);
 
 function ValidForm() {
     event.preventDefault(); //prevents button-submit default to refresh page 
-    if(form.checkValidity()){
+    const inputs = ["age","albumin","mre","platelet","ast"];
+    for(let i = 0; i < inputs.length; i++){ //checking indvl error inputs on submit 
+        screeninput(inputs[i]);
+    }
+    if(form.checkValidity()){ //if all inputs in, proceed to calculate score 
         Calc();
     }
 }
@@ -74,11 +78,10 @@ function Calc() {
   document.getElementById("5Y").textContent = FiYpercent.toPrecision(3) + "%";
 
   drawChart();
-    document.getElementById("result").style.display = "initial";
+    document.getElementById("result").style.display = "initial"; //display results column
 }
 //ChartJs - draws the bar chart 
-function drawChart() {
-document.getElementById("chart").style.display = "flex"; //display Chart 
+function drawChart() { 
 
 var ctx = document.getElementById("chart");
 
@@ -112,13 +115,11 @@ StackedBar = new Chart(ctx, {
             y: {
                 beginAtZero: true,
                 min:0,
-                max:50
-            },
-            x: {
+                max:50 
             }
         },
         responsive: true, //set sizing chart options 
-        maintainAspectRatio: false,
+        maintainAspectRatio: false, //important for chart scaling 
         resizeDelay: 2 //Important for dynamic resizing 
         
     }
