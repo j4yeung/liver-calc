@@ -6,7 +6,7 @@ body { /*text styling*/
     background: #fafafa;
 }
 
-p, #content li, u{ /*text styling*/
+p, #content li, #content u{ /*text styling*/
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
@@ -242,6 +242,10 @@ footer { /*footer, box-shadow to extend past container */
 }
 footer p{
     color:white;
+}
+
+footer u{
+    color:white !important;
 }
 
 #foot-a{
