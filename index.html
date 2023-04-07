@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The NAFLD MRE Calculator is a hepatic decompensation risk calculator for predicting 3 and 5 Year mortality in NAFLD patients...">
-  <meta name="keywords" content="NAFLD,MRE,calculator,liver disease">
-  <title>NAFLD MRE Calculator</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-  <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="The NAFLD MRE Calculator is a hepatic decompensation risk calculator for predicting 3 and 5 Year mortality in NAFLD patients...">
+    <meta name="keywords" content="NAFLD,MRE,calculator,liver disease">
+    <title>NAFLD MRE Calculator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#262d43">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
-
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-<!-- Chart JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Chart JS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -234,6 +248,7 @@
                             </ul></p>
                             <p style="font-weight: 600;">Multivariable Model:</p>
                             <table class="table table-bordered table-responsive">
+                                <caption> Multivariable Model for Hepatic Decompensation</caption>
                                 <thead>
                                     <th scope="col">S<sub>0</sub>(t) at 3 Years</th>
                                     <th scope="col">S<sub>0</sub>(t) at 5 Years</th>
@@ -295,31 +310,56 @@
             <p>Future prospective studies evaluating this MRE-based model with systematic assessment of hepatic decompensation are recommended</p>
             <div class="spacer"></div>
             <footer>
-                 <div class="row p-4">
+                <div class="row p-4">
                     <div class="col-lg-5">
-                        <p>Liver Calc includes clinical tools and content intended for use by healthcare professionals. These tools do not give professional advice; physicians and other healthcare professionals who use these tools or databases should exercise their own clinical judgment as to the information they provide. Consumers (non-medical professionals) who use the tools or databases do so at their own risk. Individuals with any type of medical condition are specifically cautioned to seek professional medical advice before beginning any sort of health treatment. For medical concerns, including decisions about medications and other treatments, non-medical users users should always consult their physician or other qualified healthcare professional.</p>
-                        <p>Liver Calc's content developers have carefully tried to create its content to conform to the standards of professional practice that prevailed at the time of development. However, standards and practices in medicine change as new data become available and the individual medical professional should consult a variety of sources.
-                            The contents of the Liver Calc site and apps, such as text, graphics, and images are for informational purposes only. Liver Calc does not recommend or endorse any specific tests, physicians, products, procedures, opinions, or other information that may be mentioned on the site.</p>
+                        <p>Liver Calc includes clinical tools and content intended for use by healthcare professionals. These tools
+                            do not give professional advice; physicians and other healthcare professionals who use these tools or
+                            databases should exercise their own clinical judgment as to the information they provide. Consumers
+                            (non-medical professionals) who use the tools or databases do so at their own risk. Individuals with any
+                            type of medical condition are specifically cautioned to seek professional medical advice before
+                            beginning any sort of health treatment. For medical concerns, including decisions about medications and
+                            other treatments, non-medical users users should always consult their physician or other qualified
+                            healthcare professional.</p>
+                        <p>Liver Calc's content developers have carefully tried to create its content to conform to the standards of
+                            professional practice that prevailed at the time of development. However, standards and practices in
+                            medicine change as new data become available and the individual medical professional should consult a
+                            variety of sources.
+                            The contents of the Liver Calc site and apps, such as text, graphics, and images are for informational
+                            purposes only. Liver Calc does not recommend or endorse any specific tests, physicians, products,
+                            procedures, opinions, or other information that may be mentioned on the site.</p>
                     </div>
-                    <div class ="col-lg-7">
-                        <div class ="row">
-                            <div class="col-sm-2 pr-0 text-sm-center">  
-                                <a class="btn btn-link btn-floating btn-lg text-dark m-1 p-0" href="https://twitter.com/_nafldresearch?lang=en" target="_blank" rel="noreferrer noopener" role="button" data-mdb-ripple-color="dark">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1DA1F2" class="bi bi-twitter" viewBox="0 0 16 16">
-                                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-sm-2 pr-0 text-sm-center">
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1 p-0"
+                                    href="https://twitter.com/_nafldresearch?lang=en" target="_blank" rel="noreferrer noopener"
+                                    role="button" data-mdb-ripple-color="dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1DA1F2"
+                                        class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                                     </svg>
-                                 </a>
-                            </div> 
-                            <div class="col-sm-10 pl-0"> 
-                                 <p> <a href="https://medschool.ucsd.edu/som/medicine/divisions/gastro/research/NAFLD/Pages/default.aspx" target="_blank" rel="noreferrer noopener" ><u>UC San Diego NAFLD Research Center </u></a>
-                                 <br> Altman Clinical and Translational Research Institute <br> 9452 Medical Center Drive La Jolla, CA 92037</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-10 pl-0">
+                                <p> <a href="https://medschool.ucsd.edu/som/medicine/divisions/gastro/research/NAFLD/Pages/default.aspx"
+                                        target="_blank" rel="noreferrer noopener"><u>UC San Diego NAFLD Research Center </u></a>
+                                    <br> Altman Clinical and Translational Research Institute <br> 9452 Medical Center Drive La
+                                    Jolla, CA 92037
+                                </p>
                             </div>
                         </div>
                         <div class="row ml-sm-4">
-                            <h6 id = "foot-a">Authors</h6>
-                            <p> Beom Kyung Kim<sup>1,2</sup>, Jaclyn Bergstrom<sup>1</sup>, Rohan Loomba<sup>1</sup>, Nobuharu Tamaki<sup>1,5</sup>, Namiki Izumi<sup>5</sup>, Atsushi Nakajima<sup>1,6</sup>, Ramazan Idilman<sup>7</sup>, Mesut Gumussoy<sup>7</sup>, Digdem Kuru Oz<sup>8</sup>, Ayse Erden<sup>8</sup>, Emily Truong<sup>9</sup>, Ju Dong Yang<sup>9</sup>, Mazen Noureddin<sup>9</sup>, Alina M. Allen<sup>10</sup> and Rohit Loomba<sup>1,11</sup>, Veeral Ajmera<sup>1</sup></p>
-                            <P> <sup>1</sup>NAFLD Research Center, Division of Gastroenterology. University of California at San Diego, La Jolla, CA, USA
-                                <sup>2</sup>Department of Internal Medicine, Yonsei University College of Medicine, Seoul, Republic of Korea 
+                            <h6 id="foot-a">Authors</h6>
+                            <p> Beom Kyung Kim<sup>1,2</sup>, Jaclyn Bergstrom<sup>1</sup>, Rohan Loomba<sup>1</sup>, Nobuharu
+                                Tamaki<sup>1,5</sup>, Namiki Izumi<sup>5</sup>, Atsushi Nakajima<sup>1,6</sup>, Ramazan
+                                Idilman<sup>7</sup>, Mesut Gumussoy<sup>7</sup>, Digdem Kuru Oz<sup>8</sup>, Ayse Erden<sup>8</sup>,
+                                Emily Truong<sup>9</sup>, Ju Dong Yang<sup>9</sup>, Mazen Noureddin<sup>9</sup>, Alina M.
+                                Allen<sup>10</sup> and Rohit Loomba<sup>1,11</sup>, Veeral Ajmera<sup>1</sup></p>
+                            <P> <sup>1</sup>NAFLD Research Center, Division of Gastroenterology. University of California at San
+                                Diego, La Jolla, CA, USA
+                                <sup>2</sup>Department of Internal Medicine, Yonsei University College of Medicine, Seoul, Republic
+                                of Korea
                                 <sup>3</sup>Division of Internal Medicine, Conemaugh Memorial Medical Center, Johnstown, PA, USA
                                 <sup>4</sup>Evidence-Based Practice Center, Mayo Clinic, Rochester, MN, USA
                                 <sup>5</sup>Department of Gastroenterology and Hepatology, Musashino Red Cross Hospital Tokyo, Japan
@@ -329,11 +369,12 @@
                                 <sup>9</sup>Department of Gastroenterology and Hepatology, Cedars Sinai, Los Angeles, CA, USA
                                 <sup>10</sup>Division of Gastroenterology and Hepatology, Mayo Clinic, Rochester, MN, USA
                                 <sup>11</sup>School of Public Health, University of California, San Diego
-                                </P>
+                            </P>
                         </div>
                     </div>
-                </div>                
-           </footer>
+                </div>
+            
+            </footer>
        </div>
         <div class="endcopy text-sm-center">
         <p class="pt-2 mb-0 pb-2" style="color: white">Copyright © 2023 Justin Yeung</p>

@@ -3,6 +3,7 @@ $(document).ready(function () { //sidebar
         $('#sidebar').toggleClass('active');
     });
 });
+
 var form = document.getElementById("calc-column");
 //listens and updates form inputs to global variables once user done with input ("input" for dynamic inputs while in box)
 form.addEventListener("change", Check);
