@@ -207,6 +207,7 @@ input {
     overflow-y: scroll;
     height: 50vh;
 }
+
 .nav-link.active { 
     background-color: #5c6ca1 !important;
 }
